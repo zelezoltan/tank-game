@@ -1,6 +1,6 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-//const button = document.querySelectorAll('button')[0];
+const button = document.querySelectorAll('button')[0];
 ctx.fillStyle = 'rgb(0,0,0)';
 ctx.fillRect(0,0,1024,768);
 
@@ -299,8 +299,9 @@ function updateStats(){
     document.querySelector('#redPower').innerHTML = redPlayer.power;
 }
 
-function draw(){
-    //drawPolynomial(pol);
+/*function draw(){
+    drawPolynomial(pol);
+    /*
     drawFromGround();
     drawGround();
     drawTank(bluePlayer, "blue");
@@ -308,7 +309,7 @@ function draw(){
     drawBullets();
     drawExplosions();
     updateStats();
-}
+}*/
 
 function drawFromGround(){
     ctx.fillStyle = 'rgb(0,0,0)';
@@ -348,9 +349,9 @@ function step(){
     requestAnimationFrame(step);
 }
 
-startRandomGame();
+/*startRandomGame();
 step();
-
+*/
 document.addEventListener('keydown', (e) => {
     switch(e.key){
         case "a": aDown = true; break;
@@ -388,7 +389,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 // map creation
-/*canvas.addEventListener('click', (e) => {
+canvas.addEventListener('click', (e) => {
     console.log(e.layerX, e.layerY);
     points.push(new Point(e.layerX, e.layerY));
 
@@ -421,7 +422,7 @@ document.querySelector('input').addEventListener('click', () => {
     }
     maps.push(pol);
     localStorage.setItem('maps', JSON.stringify(maps));
-});*/
+});
 
 
 
