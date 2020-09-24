@@ -1,0 +1,25 @@
+*{
+    
+}
+
+.stats{
+    /*background: blue;*/
+    width: 1024px;
+    height: 150px;
+    position: relative;
+}
+
+.blue{
+    position: absolute;
+    left:0;
+    top:0;
+    color: blue;
+}
+
+.red{
+    position: absolute;
+    right:0;
+    top:0;
+    color: red;
+    
+}
